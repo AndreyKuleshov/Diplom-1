@@ -7,7 +7,7 @@ import praktikum.Praktikum;
 public class PraktikumTest extends PraktikumBaseClass{
     @Test
     public void mainClassTest() {
-        Praktikum.main(args);
+        Praktikum.main(getArgs());
         Assert.assertEquals(getEXPECTED_PRAKTIKUM_RESULT(), OUT_CONTENT.toString());
     }
 }

@@ -5,7 +5,6 @@ import praktikum.IngredientType;
 import praktikum.TestData;
 
 public abstract class IngredientBaseClass extends TestData {
-    Ingredient ingredientSauce = new Ingredient(IngredientType.SAUCE, SAUCE, PRICE_SAUCE);
-    Ingredient ingredientFilling = new Ingredient(IngredientType.FILLING, FILLING, PRICE_FILLING);
+    Ingredient ingredient = new Ingredient(IngredientType.SAUCE, getSAUCE(), getPRICE_INGREDIENT());
 
 }
