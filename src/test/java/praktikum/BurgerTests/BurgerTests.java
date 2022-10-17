@@ -11,27 +11,27 @@ public class BurgerTests extends BurgerBaseClass {
     public void getPriceTest(){
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
-        Assert.assertEquals(getEXPECTED_BURGER_PRICE(), burger.getPrice(), 0);
+        Assert.assertEquals(EXPECTED_BURGER_PRICE, burger.getPrice(), 0);
     }
     @Test
     public void getReceiptTest() {
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
-        Assert.assertEquals(getBURGER_RECEIPT(), burger.getReceipt());
+        Assert.assertEquals(BURGER_RECEIPT, burger.getReceipt());
     }
     @Test
     public void removeIngredientTest() {
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
-        burger.removeIngredient(getFIRST_INGREDIENT());
-        Assert.assertEquals(getEXPECTED_BURGER_PRICE_AFTER_DELETION(), burger.getPrice(), 0);
+        burger.removeIngredient(FIRST_INGREDIENT);
+        Assert.assertEquals(EXPECTED_BURGER_PRICE_AFTER_DELETION, burger.getPrice(), 0);
     }
     @Test
     public void moveIngredientTest() {
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
         burger.addIngredient(ingredientTwo);
-        burger.moveIngredient(getFIRST_INGREDIENT(),getSECOND_INGREDIENT());
-        Assert.assertEquals(getBURGER_MOVED_RECEIPT(), burger.getReceipt());
+        burger.moveIngredient(FIRST_INGREDIENT,SECOND_INGREDIENT);
+        Assert.assertEquals(BURGER_MOVED_RECEIPT, burger.getReceipt());
     }
 }

@@ -6,10 +6,10 @@ import org.junit.Test;
 public class BunTest extends BunBaseClass {
     @Test
     public void getBunNameTest() {
-        Assert.assertEquals(getBUN_NAME(), bun.getName());
+        Assert.assertEquals(BUN_NAME, bun.getName());
     }
     @Test
     public void getBunPriceTest() {
-        Assert.assertEquals(getBUN_PRICE(), bun.getPrice(), 0);
+        Assert.assertEquals(BUN_PRICE, bun.getPrice(), 0);
     }
 }

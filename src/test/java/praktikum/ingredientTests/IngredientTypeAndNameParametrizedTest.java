@@ -10,7 +10,6 @@ import praktikum.TestData;
 
 @RunWith(Parameterized.class)
 public class IngredientTypeAndNameParametrizedTest {
-    private static final TestData TEST_DATA = new TestData();
     private final IngredientType TYPE;
     private final String NAME;
 
@@ -22,13 +21,13 @@ public class IngredientTypeAndNameParametrizedTest {
     @Parameterized.Parameters
     public static Object[][] testData() {
         return new Object[][] {
-                { IngredientType.SAUCE, TEST_DATA.getSAUCE()},
-                { IngredientType.FILLING, TEST_DATA.getFILLING()},
+                { IngredientType.SAUCE, TestData.SAUCE},
+                { IngredientType.FILLING, TestData.FILLING},
         };
     }
     @Test
     public void getIngredientTypeTest() {
-        Ingredient ingredient = new Ingredient(TYPE, NAME, TEST_DATA.getINGREDIENT_PRICE());
+        Ingredient ingredient = new Ingredient(TYPE, NAME, TestData.INGREDIENT_PRICE);
         Assert.assertEquals(TYPE, ingredient.getType());
         Assert.assertEquals(NAME, ingredient.getName());
     }
